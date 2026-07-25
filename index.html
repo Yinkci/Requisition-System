@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requisition System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard"><span class="brand-mark">RS</span><span>Requisition<br /><strong>System</strong></span></a>
+        <nav class="main-nav" id="mainNav" aria-label="Main navigation"></nav>
+        <div class="sidebar-footer">
+          <button class="nav-link" id="helpButton"><span>?</span> Workflow guide</button>
+          <div class="user-card"><span class="avatar" id="avatar">JM</span><span><strong id="userName">Jordan Martinez</strong><small id="userRole">Requester</small></span></div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+          <div class="page-title"><p id="eyebrow">REQUISITION SYSTEM</p><h1 id="pageTitle">My work</h1></div>
+          <div class="top-actions">
+            <label class="role-switcher">View as <select id="roleSelect" aria-label="View system as role"></select></label>
+            <button class="reset-button" id="resetDemoButton" aria-label="Reset demo data" title="Reset demo data">↻</button>
+            <button class="icon-button" id="notificationButton" aria-label="Notifications">●<span class="dot"></span></button>
+          </div>
+        </header>
+        <section class="view active" id="dashboard"></section>
+        <section class="view" id="queue"></section>
+        <section class="view" id="new-request"></section>
+        <section class="view" id="requests"></section>
+        <section class="view" id="inventory"></section>
+        <section class="view" id="stock"></section>
+        <section class="view" id="reports"></section>
+        <section class="view" id="settings"></section>
+        <section class="view" id="users"></section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><span class="label">REQUISITION DETAILS</span><h2 id="modalTitle">Requisition</h2><div id="modalContent"></div></section></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
