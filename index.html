@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Requisition System</title>
+    <title>RPMS | Requisition &amp; Procurement Management System</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="modern.css" />
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar">
-        <a class="brand" href="#dashboard"><span class="brand-mark">RS</span><span>Requisition<br /><strong>System</strong></span></a>
+        <a class="brand" href="#dashboard" aria-label="RPMS home"><img class="brand-logo" src="logo.png" alt="RPMS — Requisition and Procurement Management System" /></a>
         <nav class="main-nav" id="mainNav" aria-label="Main navigation"></nav>
         <div class="sidebar-footer">
-          <button class="nav-link" id="helpButton"><span>?</span> Workflow guide</button>
           <div class="user-card"><span class="avatar" id="avatar">JM</span><span><strong id="userName">Jordan Martinez</strong><small id="userRole">Requester</small></span></div>
         </div>
       </aside>
@@ -20,9 +20,9 @@
       <main class="content">
         <header class="topbar">
           <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
-          <div class="page-title"><p id="eyebrow">REQUISITION SYSTEM</p><h1 id="pageTitle">My work</h1></div>
+          <div class="page-title"><p id="eyebrow">RPMS WORKSPACE</p><h1 id="pageTitle">My work</h1></div>
           <div class="top-actions">
-            <label class="role-switcher">View as <select id="roleSelect" aria-label="View system as role"></select></label>
+            <label class="role-switcher">Role <select id="roleSelect" aria-label="View system as role"></select></label>
             <button class="reset-button" id="resetDemoButton" aria-label="Reset demo data" title="Reset demo data">↻</button>
             <button class="icon-button" id="notificationButton" aria-label="Notifications">●<span class="dot"></span></button>
           </div>
