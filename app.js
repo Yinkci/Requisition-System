@@ -1,10 +1,10 @@
 const people = {
-  requester: { name: "Jordan Martinez", initials: "JM", label: "Requester" },
+  requester: { name: "Paolo Cruz", initials: "PC", label: "Requester" },
   coordinator: { name: "Avery Chen", initials: "AC", label: "Coordinator" },
-  finance: { name: "Priya Shah", initials: "PS", label: "Administrative & Finance Officer" },
+  finance: { name: "Francis Flores", initials: "FF", label: "Administrative & Finance Officer" },
   custodian: { name: "Morgan Lee", initials: "ML", label: "Custodian" },
   purchasing: { name: "Sam Rivera", initials: "SR", label: "Purchasing Officer" }
-  ,superadmin: { name: "Casey Morgan", initials: "CM", label: "Super Admin" }
+  ,superadmin: { name: "Nicky Jacobo", initials: "NJ", label: "Super Admin" }
 };
 const navByRole = {
   requester: [["dashboard","Dashboard"],["new-request","New request"],["requests","My requests"]],
@@ -15,20 +15,20 @@ const navByRole = {
   superadmin: [["dashboard","Operations overview"],["requests","All requisitions"],["users","Users & roles"],["reports","Reports"],["settings","System settings"]]
 };
 const defaults = [
-  {id:"REQ-2026-1048", title:"Science laboratory supplies", department:"Academic Affairs", date:"Jul 22, 2026", neededBy:"Aug 12, 2026", total:1840, status:"Coordinator Review", requester:"Jordan Martinez", purpose:"Replace consumable materials for Grade 6–8 laboratory activities.", items:[{name:"Microscope slides",qty:10,price:24,onHand:10},{name:"Nitrile gloves",qty:20,price:12,onHand:20}], history:[{by:"Jordan Martinez",event:"Submitted request",at:"Jul 22, 9:14 AM"}]},
-  {id:"REQ-2026-1044", title:"Classroom printer toner", department:"Administration", date:"Jul 19, 2026", neededBy:"Aug 1, 2026", total:695, status:"Finance Review", requester:"Jordan Martinez", purpose:"Maintain printing capacity for school administrative documents.", items:[{name:"Black toner cartridges",qty:5,price:139,onHand:0}], history:[{by:"Avery Chen",event:"Approved and forwarded to Finance",at:"Jul 20, 2:32 PM"}]},
-  {id:"REQ-2026-1037", title:"Library reading nook furniture", department:"Student Services", date:"Jul 15, 2026", neededBy:"Aug 20, 2026", total:3200, status:"Custodian Check", requester:"Jordan Martinez", purpose:"Create a comfortable reading space in the library.", items:[{name:"Bean bag chairs",qty:12,price:150,onHand:7},{name:"Low bookshelves",qty:4,price:350,onHand:4}], history:[{by:"Priya Shah",event:"Initial finance approval; sent to Custodian",at:"Jul 17, 11:06 AM"}]},
-  {id:"REQ-2026-1035", title:"Network switches", department:"Technology", date:"Jul 12, 2026", neededBy:"Aug 5, 2026", total:1260, status:"Final Finance Approval", requester:"Jordan Martinez", purpose:"Expand network capacity for the new computer laboratory.", items:[{name:"24-port network switches",qty:3,price:420,onHand:0}], availability:"Unavailable", history:[{by:"Morgan Lee",event:"Availability recorded: unavailable; forwarded for final Finance approval",at:"Jul 16, 3:20 PM"}]},
-  {id:"REQ-2026-1031", title:"Art classroom supplies", department:"Academic Affairs", date:"Jul 8, 2026", neededBy:"Jul 30, 2026", total:460, status:"Partial Release Decision", requester:"Jordan Martinez", purpose:"Restock materials for art lessons.", items:[{name:"Sketch pads",qty:30,price:8,onHand:30},{name:"Watercolour sets",qty:20,price:11,onHand:8}], availability:"Partially available", history:[{by:"Morgan Lee",event:"Availability recorded: partially available",at:"Jul 10, 10:10 AM"}]},
-  {id:"REQ-2026-1029", title:"Athletics first-aid kits", department:"Student Services", date:"Jul 10, 2026", neededBy:"Jul 18, 2026", total:450, status:"Completed", requester:"Jordan Martinez", purpose:"Restock first-aid supplies for athletics and outdoor programs.", items:[{name:"First-aid kits",qty:10,price:45,onHand:10}], history:[{by:"Morgan Lee",event:"Items released; receipt acknowledged",at:"Jul 18, 4:18 PM"}]}
+  {id:"REQ-2026-1048", title:"Science laboratory supplies", department:"Academic Affairs", date:"Jul 22, 2026", neededBy:"Aug 12, 2026", total:1840, status:"Coordinator Review", requester:"Paolo Cruz", purpose:"Replace consumable materials for Grade 6–8 laboratory activities.", items:[{name:"Microscope slides",qty:10,price:24,onHand:10},{name:"Nitrile gloves",qty:20,price:12,onHand:20}], history:[{by:"Paolo Cruz",event:"Submitted request",at:"Jul 22, 9:14 AM"}]},
+  {id:"REQ-2026-1044", title:"Classroom printer toner", department:"Administration", date:"Jul 19, 2026", neededBy:"Aug 1, 2026", total:695, status:"Finance Review", requester:"Paolo Cruz", purpose:"Maintain printing capacity for school administrative documents.", items:[{name:"Black toner cartridges",qty:5,price:139,onHand:0}], history:[{by:"Avery Chen",event:"Approved and forwarded to Finance",at:"Jul 20, 2:32 PM"}]},
+  {id:"REQ-2026-1037", title:"Library reading nook furniture", department:"Student Services", date:"Jul 15, 2026", neededBy:"Aug 20, 2026", total:3200, status:"Custodian Check", requester:"Paolo Cruz", purpose:"Create a comfortable reading space in the library.", items:[{name:"Bean bag chairs",qty:12,price:150,onHand:7},{name:"Low bookshelves",qty:4,price:350,onHand:4}], history:[{by:"Francis Flores",event:"Initial finance approval; sent to Custodian",at:"Jul 17, 11:06 AM"}]},
+  {id:"REQ-2026-1035", title:"Network switches", department:"Technology", date:"Jul 12, 2026", neededBy:"Aug 5, 2026", total:1260, status:"Final Finance Approval", requester:"Paolo Cruz", purpose:"Expand network capacity for the new computer laboratory.", items:[{name:"24-port network switches",qty:3,price:420,onHand:0}], availability:"Unavailable", history:[{by:"Morgan Lee",event:"Availability recorded: unavailable; forwarded for final Finance approval",at:"Jul 16, 3:20 PM"}]},
+  {id:"REQ-2026-1031", title:"Art classroom supplies", department:"Academic Affairs", date:"Jul 8, 2026", neededBy:"Jul 30, 2026", total:460, status:"Partial Release Decision", requester:"Paolo Cruz", purpose:"Restock materials for art lessons.", items:[{name:"Sketch pads",qty:30,price:8,onHand:30},{name:"Watercolour sets",qty:20,price:11,onHand:8}], availability:"Partially available", history:[{by:"Morgan Lee",event:"Availability recorded: partially available",at:"Jul 10, 10:10 AM"}]},
+  {id:"REQ-2026-1029", title:"Athletics first-aid kits", department:"Student Services", date:"Jul 10, 2026", neededBy:"Jul 18, 2026", total:450, status:"Completed", requester:"Paolo Cruz", purpose:"Restock first-aid supplies for athletics and outdoor programs.", items:[{name:"First-aid kits",qty:10,price:45,onHand:10}], history:[{by:"Morgan Lee",event:"Items released; receipt acknowledged",at:"Jul 18, 4:18 PM"}]}
 ];
 let requests = JSON.parse(localStorage.getItem("requisitionWorkflowV2") || "null") || defaults;
 let role = localStorage.getItem("requisitionRole") || "requester";
 let users = JSON.parse(localStorage.getItem("requisitionUsers") || "null") || [
-  {name:"Casey Morgan",email:"casey.morgan@schoolboard.edu",role:"Super Admin",department:"Administration"},
-  {name:"Jordan Martinez",email:"jordan.martinez@schoolboard.edu",role:"Requester",department:"Academic Affairs"},
+  {name:"Nicky Jacobo",email:"nicky.jacobo@schoolboard.edu",role:"Super Admin",department:"Administration"},
+  {name:"Paolo Cruz",email:"pao.cruz@schoolboard.edu",role:"Requester",department:"Academic Affairs"},
   {name:"Avery Chen",email:"avery.chen@schoolboard.edu",role:"Coordinator",department:"Administration"},
-  {name:"Priya Shah",email:"priya.shah@schoolboard.edu",role:"Administrative & Finance Officer",department:"Finance"},
+  {name:"Francis Flores",email:"priya.shah@schoolboard.edu",role:"Administrative & Finance Officer",department:"Finance"},
   {name:"Morgan Lee",email:"morgan.lee@schoolboard.edu",role:"Custodian",department:"Facilities"},
   {name:"Sam Rivera",email:"sam.rivera@schoolboard.edu",role:"Purchasing Officer",department:"Purchasing"}
 ];

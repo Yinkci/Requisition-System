@@ -21,7 +21,7 @@
 }
 
 * { scrollbar-color: #689de1 transparent; }
-body { background: var(--canvas); color: var(--ink); font-family: Inter, "Segoe UI", Arial, sans-serif; }
+body { background: var(--canvas); color: var(--ink); font-family: "Aptos", "Segoe UI Variable", "Segoe UI", Arial, sans-serif; }
 body::selection { background: #e5d0a7; color: #151c17; }
 .app-shell { background: var(--canvas); }
 
@@ -77,7 +77,7 @@ body::selection { background: #e5d0a7; color: #151c17; }
   box-shadow: 0 2px 12px rgba(13,13,51,.025);
   backdrop-filter: blur(14px);
 }
-.topbar h1, .page-title, h1, h2, h3 { color: var(--ink); font-family: Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+.topbar h1, .page-title, h1, h2, h3 { color: var(--ink); font-family: "Aptos Display", "Segoe UI Variable Display", "Aptos", "Segoe UI", Arial, sans-serif; font-weight: 750; letter-spacing: -.035em; }
 .topbar h1 { font-size: 1.85rem; }
 .eyebrow, .section-eyebrow { color: var(--blue-strong); letter-spacing: .14em; font-weight: 800; }
 .role-switcher {
@@ -128,7 +128,7 @@ select:focus, input:focus, textarea:focus { border-color: #689de1 !important; bo
   border-radius: 50%;
   box-shadow: 0 0 0 42px rgba(104, 157, 225, .08), 0 0 0 84px rgba(104, 157, 225, .045);
 }
-.role-hero::after { content: "RPMS"; position: absolute; right: 40px; bottom: 24px; color: rgba(255,255,255,.12); font: 700 4rem/1 Georgia, serif; letter-spacing: .08em; }
+.role-hero::after { content: "RPMS"; position: absolute; right: 40px; bottom: 24px; color: rgba(255,255,255,.12); font: 750 4rem/1 "Aptos Display", "Segoe UI", sans-serif; letter-spacing: .08em; }
 .role-hero .eyebrow { color: #f3c837; }
 .role-hero h2, .role-hero h3 { color: #fffaf0; font-size: clamp(2rem, 3.2vw, 3rem); }
 .role-hero p { max-width: 620px; color: #dce4d9; }
@@ -153,7 +153,7 @@ select:focus, input:focus, textarea:focus { border-color: #689de1 !important; bo
 .metric-card { overflow: hidden; position: relative; }
 .metric-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: linear-gradient(#689de1, #0d0d33); }
 .metric-icon { color: #3f78c1; background: #eaf2fe; }
-.metric-value { color: var(--ink); font-family: Georgia, serif; }
+.metric-value { color: var(--ink); font-family: "Aptos Display", "Segoe UI Variable", sans-serif; font-weight: 750; }
 .metric-label, .muted { color: var(--muted); }
 .card-header { border-bottom-color: var(--line); }
 .dashboard-card-title { font-size: 1.28rem; }
@@ -178,7 +178,7 @@ button, .button, .primary-button, .secondary-button { border-radius: 10px; font-
 .secondary-button, .button.secondary { color: #3f78c1; border-color: #bcd4f4; background: #f7fbff; }
 .danger-button, .button.danger { color: #a23a49; border-color: #e8b5bc; background: #fffafa; }
 .form-section { border-top-color: var(--line); }
-.form-section-title { color: #344238; font-family: Georgia, serif; }
+.form-section-title { color: #344238; font-family: "Aptos Display", "Segoe UI Variable", sans-serif; font-weight: 750; }
 .form-label { color: #526055; }
 .item-row, .inventory-row { border-color: var(--line); background: #fffcf7; }
 .add-item-button { color: #3f78c1; border-color: #bcd4f4; background: #f7fbff; }
