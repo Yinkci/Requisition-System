@@ -161,6 +161,7 @@ select:focus, input:focus, textarea:focus { border-color: #689de1 !important; bo
 
 /* Data tables and status are deliberately quieter and easier to scan. */
 .table-wrap, .table-container { border-color: var(--line); border-radius: 14px; background: #fffefa; }
+.queue-item .table-wrap { margin-top: 18px; box-shadow: none; }
 table thead tr { background: #f6f1e8; }
 th { color: #4e6590; font-size: .72rem; letter-spacing: .1em; }
 td { border-bottom-color: #eee8df; }
@@ -181,12 +182,29 @@ button, .button, .primary-button, .secondary-button { border-radius: 10px; font-
 .form-section-title { color: #344238; font-family: "Aptos Display", "Segoe UI Variable", sans-serif; font-weight: 750; }
 .form-label { color: #526055; }
 .item-row, .inventory-row { border-color: var(--line); background: #fffcf7; }
+.purchase-proof { display: grid; grid-template-columns: 1fr auto; gap: 12px 20px; align-items: center; margin-top: 18px; padding: 17px; border: 1px dashed #a9c6ed; border-radius: 12px; background: #f7fbff; }
+.purchase-proof p { margin: 4px 0 0; font-size: .88rem; color: var(--muted); }
+.required-mark { color: var(--red); }
+.proof-upload { cursor: pointer; }
+.proof-upload span { display: inline-flex; padding: 9px 13px; border: 1px solid #bcd4f4; border-radius: 9px; color: #3f78c1; font-weight: 750; background: #fff; }
+.proof-upload input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.proof-file { grid-column: 1 / -1; display: flex; gap: 12px; align-items: center; color: #24664f; font-size: .9rem; }
+.riso-choice { display: flex; flex-wrap: wrap; gap: 12px; margin: 14px 0 18px; }
+.riso-choice label { display: inline-flex; align-items: center; gap: 8px; min-width: 160px; padding: 11px 14px; border: 1px solid #c8dbf5; border-radius: 10px; color: var(--ink); background: #f8fbff; }
+.riso-choice input { width: auto; accent-color: #689de1; }
+.riso-attachment { padding: 12px 14px; border-radius: 9px; color: #385f95; background: #eef5ff; }
+.riso-attachment a { color: #2669bf; font-weight: 750; }
+.receipt-confirmation { margin-top: 24px; border-color: #bcd4f4; background: #f3f8ff; }
 .add-item-button { color: #3f78c1; border-color: #bcd4f4; background: #f7fbff; }
 .notice, .info-banner { border-color: #efd77a; color: #73590b; background: #fff9e8; }
 
 /* Modal and settings spaces */
 .modal-backdrop { background: rgba(13,21,16,.52); backdrop-filter: blur(5px); }
 .modal, .modal-content { border: 1px solid #e9dfd0; border-radius: 18px; background: #fffdf9; box-shadow: 0 28px 80px rgba(12,20,14,.27); }
+.modal { box-sizing: border-box; display: flex; flex-direction: column; max-height: calc(100vh - 40px); overflow: hidden; }
+.modal #modalContent { min-height: 0; overflow-y: auto; padding-right: 10px; overscroll-behavior: contain; }
+.modal #modalContent::-webkit-scrollbar { width: 8px; }
+.modal #modalContent::-webkit-scrollbar-thumb { border-radius: 999px; background: #b8d0f1; }
 .modal-header { border-bottom-color: var(--line); }
 .settings-nav { background: #f0ece4; border-color: var(--line); }
 .settings-nav button.active { color: #ffffff; background: #0d0d33; }
@@ -218,4 +236,5 @@ button, .button, .primary-button, .secondary-button { border-radius: 10px; font-
   .role-hero { min-height: 0; padding: 28px 24px; border-radius: 16px; }
   .role-hero::before, .role-hero::after { display: none; }
   .card, .queue-card, .request-card, .settings-card, .form-card, .activity-card { padding: 20px; }
+  .modal { max-height: calc(100vh - 24px); border-radius: 14px; }
 }
